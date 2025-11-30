@@ -8,6 +8,7 @@ local Main = Instance.new("Frame")
 local Frame = Instance.new("Frame")
 local ctrlhide = Instance.new("TextLabel")
 local mine = Instance.new("TextLabel")
+local ImageLabel = Instance.new("ImageLabel")
 local ScrollingFrame = Instance.new("ScrollingFrame")
 local Aimey = Instance.new("TextButton")
 local AntiFling = Instance.new("TextButton")
@@ -15,13 +16,14 @@ local Esp = Instance.new("TextButton")
 local FlingM = Instance.new("TextButton")
 local FlingS = Instance.new("TextButton")
 local Grabby = Instance.new("TextButton")
+local flinglabel = Instance.new("TextLabel")
 local MTp = Instance.new("TextButton")
 local Noclip = Instance.new("TextButton")
 local Speedz = Instance.new("TextButton")
 local UserFling = Instance.new("TextBox")
-local flinglabel = Instance.new("TextLabel")
 local UIGridLayout = Instance.new("UIGridLayout")
 local KillAll = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
 
 --Properties:
 
@@ -34,8 +36,8 @@ Main.Parent = ScreenGui
 Main.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.BorderSizePixel = 0
-Main.Position = UDim2.new(0.0915705189, 0, 0.275990099, 0)
-Main.Size = UDim2.new(0, 1055, 0, 29)
+Main.Position = UDim2.new(0.0915705189, 0, 0.30569306, 0)
+Main.Size = UDim2.new(0, 869, 0, 29)
 Main.Active = true
 Main.Draggable = true
 
@@ -43,16 +45,16 @@ Frame.Parent = Main
 Frame.BackgroundColor3 = Color3.fromRGB(25, 0, 50)
 Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.BorderSizePixel = 0
-Frame.Position = UDim2.new(-0.000725710881, 0, 0.967053652, 0)
-Frame.Size = UDim2.new(0, 236, 0, 303)
+Frame.Position = UDim2.new(0, 0, 0.967053652, 0)
+Frame.Size = UDim2.new(0, 235, 0, 303)
 
 ctrlhide.Name = "ctrlhide"
 ctrlhide.Parent = Frame
 ctrlhide.BackgroundColor3 = Color3.fromRGB(25, 0, 50)
 ctrlhide.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ctrlhide.BorderSizePixel = 0
-ctrlhide.Position = UDim2.new(-0.00440515205, 0, -0.000143422541, 0)
-ctrlhide.Size = UDim2.new(0, 235, 0, 32)
+ctrlhide.Position = UDim2.new(0, 0, -0.000143422541, 0)
+ctrlhide.Size = UDim2.new(0, 233, 0, 32)
 ctrlhide.Font = Enum.Font.LuckiestGuy
 ctrlhide.Text = "CTRL to hide ze GUI"
 ctrlhide.TextColor3 = Color3.fromRGB(170, 0, 255)
@@ -65,8 +67,8 @@ mine.Parent = Frame
 mine.BackgroundColor3 = Color3.fromRGB(25, 0, 50)
 mine.BorderColor3 = Color3.fromRGB(0, 0, 0)
 mine.BorderSizePixel = 0
-mine.Position = UDim2.new(-0.00440515205, 0, 0.104897171, 0)
-mine.Size = UDim2.new(0, 235, 0, 32)
+mine.Position = UDim2.new(0, 0, 0.104897171, 0)
+mine.Size = UDim2.new(0, 233, 0, 32)
 mine.Font = Enum.Font.LuckiestGuy
 mine.Text = "united hub v4 made by @championsblatancy all lowercase in dc (FOR MM2)"
 mine.TextColor3 = Color3.fromRGB(170, 0, 255)
@@ -74,13 +76,21 @@ mine.TextScaled = true
 mine.TextSize = 14.000
 mine.TextWrapped = true
 
+ImageLabel.Parent = Frame
+ImageLabel.BackgroundColor3 = Color3.fromRGB(25, 0, 50)
+ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(0, 0, 0.20792079, 0)
+ImageLabel.Size = UDim2.new(0, 234, 0, 239)
+ImageLabel.Image = "rbxassetid://337386175"
+
 ScrollingFrame.Parent = Main
 ScrollingFrame.Active = true
 ScrollingFrame.BackgroundColor3 = Color3.fromRGB(25, 0, 50)
 ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ScrollingFrame.BorderSizePixel = 0
 ScrollingFrame.Position = UDim2.new(0, 235, 0, 29)
-ScrollingFrame.Size = UDim2.new(0, 820, 0, 302)
+ScrollingFrame.Size = UDim2.new(0, 634, 0, 302)
 ScrollingFrame.CanvasSize = UDim2.new(0, 0, 0, 600)
 
 Aimey.Name = "Aimey"
@@ -162,10 +172,23 @@ Grabby.Position = UDim2.new(0.287958115, 0, 0.623338521, 0)
 Grabby.Size = UDim2.new(0, 135, 0, 50)
 Grabby.Font = Enum.Font.LuckiestGuy
 Grabby.Text = "Auto Grab Za Goon (OFF)"
-Grabby.TextColor3 = Color3.fromRGB(170, 0, 255)
-Grabby.TextScaled = true
-Grabby.TextSize = 14.000
+Grabby.TextColor3 = Color3.fromRGB(0, 17, 255)
+Grabby.TextSize = 11.000
 Grabby.TextWrapped = true
+
+flinglabel.Name = "flinglabel"
+flinglabel.Parent = Grabby
+flinglabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+flinglabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+flinglabel.BorderSizePixel = 0
+flinglabel.Position = UDim2.new(-0.00291585294, 0, 0.620021999, 0)
+flinglabel.Size = UDim2.new(0, 150, 0, 18)
+flinglabel.Font = Enum.Font.LuckiestGuy
+flinglabel.Text = "below you can type a user and fling them!"
+flinglabel.TextColor3 = Color3.fromRGB(170, 0, 255)
+flinglabel.TextScaled = true
+flinglabel.TextSize = 14.000
+flinglabel.TextWrapped = true
 
 MTp.Name = "MTp"
 MTp.Parent = ScrollingFrame
@@ -223,20 +246,6 @@ UserFling.TextScaled = true
 UserFling.TextSize = 14.000
 UserFling.TextWrapped = true
 
-flinglabel.Name = "flinglabel"
-flinglabel.Parent = UserFling
-flinglabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-flinglabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-flinglabel.BorderSizePixel = 0
-flinglabel.Position = UDim2.new(-0.00291585294, 0, -0.00189208984, 0)
-flinglabel.Size = UDim2.new(0, 150, 0, 17)
-flinglabel.Font = Enum.Font.LuckiestGuy
-flinglabel.Text = "below you can type a user and fling them!"
-flinglabel.TextColor3 = Color3.fromRGB(170, 0, 255)
-flinglabel.TextScaled = true
-flinglabel.TextSize = 14.000
-flinglabel.TextWrapped = true
-
 UIGridLayout.Parent = ScrollingFrame
 UIGridLayout.SortOrder = Enum.SortOrder.LayoutOrder
 UIGridLayout.CellSize = UDim2.new(0, 150, 0, 50)
@@ -254,6 +263,9 @@ KillAll.TextColor3 = Color3.fromRGB(170, 0, 255)
 KillAll.TextScaled = true
 KillAll.TextSize = 14.000
 KillAll.TextWrapped = true
+
+UICorner.CornerRadius = UDim.new(0, 3)
+UICorner.Parent = Main
 
 
 local UserInputService = game:GetService("UserInputService")
